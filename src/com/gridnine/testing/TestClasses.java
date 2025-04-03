@@ -49,7 +49,7 @@ class FlightBuilder {
 /**
  * Bean that represents a flight.
  */
-class Flight {
+ class Flight {
     private final List<Segment> segments;
 
     Flight(final List<Segment> segs) {
