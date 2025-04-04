@@ -3,6 +3,7 @@ package com.gridnine.testing;
 import java.util.List;
 
 public class GroundTimeExceedsTwoHoursFilter implements FlightFilter {
+
     @Override
     public List<Flight> filter(List<Flight> flights) {
         return flights.stream()
