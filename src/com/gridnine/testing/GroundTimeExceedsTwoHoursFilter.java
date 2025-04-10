@@ -11,7 +11,10 @@ public class GroundTimeExceedsTwoHoursFilter implements FlightFilter {
                     List<Segment> segments = flight.getSegments();
                     long totalGroundTime = 0;
                     for (int i = 0; i < segments.size() - 1; i++) {
-                        totalGroundTime += segments.get(i + 1).getDepartureDate().until(segments.get(i).getArrivalDate(), java.time.temporal.ChronoUnit.HOURS);
+                        totalGroundTime += segments.get(i + 1)
+                                .getDepartureDate().until(segments
+                                                .get(i).getArrivalDate(),
+                                        java.time.temporal.ChronoUnit.HOURS);
                     }
                     return totalGroundTime <= 2;
                 })
